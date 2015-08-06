@@ -10,7 +10,7 @@ startCTT()
 Nothing
 }
 \description{
-An interactive Shiny application for running a CTT analysis.
+An interactive Shiny application for running CTT analysis.
 }
 \details{
 Start CTTShiny

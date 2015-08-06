@@ -494,6 +494,7 @@ shinyServer(function(input, output) {
   
   
   
+  
   output$check <- renderTable({
     head(check(), n = 10)
   }, digits = 0)
