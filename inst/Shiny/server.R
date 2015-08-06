@@ -464,11 +464,27 @@ shinyServer(function(input, output) {
   
   
   
-  info <- reactive({
-    info1 <- paste("This analysis was conducted with ", strsplit(R.version$version.string, " \\(")[[1]][1], ".", sep = "")
-    info2 <- paste("It was executed on ", date(), ".", sep = "")
+  info  <- reactive({
+    info1 <- paste("This analysis was performed on ", format(Sys.time(), "%A, %B %d %Y at %I:%M:%S %p"), ".", sep = "")
+    info2 <- paste(strsplit(R.version$version.string, " \\(")[[1]][1], " was used for this session.", sep = "")
+    info3 <- paste("Package version infomation for this session:")
+    info4 <- paste("shiny", packageVersion("shiny"))
+    info5 <- paste("shinyAce", packageVersion("shinyAce"))
+    info6 <- paste("psych", packageVersion("psych"))
+    info7 <- paste("CTT", packageVersion("CTT"))
+    info8 <- paste("ltm", packageVersion("ltm"))
+    
+    
     cat(sprintf(info1), "\n")
     cat(sprintf(info2), "\n")
+    cat(sprintf(info3), "\n")
+    cat(sprintf(info4), "\n")
+    cat(sprintf(info5), "\n")
+    cat(sprintf(info6), "\n")
+    cat(sprintf(info7), "\n")
+    cat(sprintf(info8), "\n")
+
+    
   })
   
   output$info.out <- renderPrint({
