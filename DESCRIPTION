@@ -1,0 +1,9 @@
+Package: CTTShiny
+Type: Package
+Title: Classical Test Theory via Shiny
+Version: 0.1
+Date: 2015-08-05
+Author: William Kyle Hamilton <kyle.hamilton@gmail.com>, Atsushi Mizumoto
+Maintainer: William Kyle Hamilton <kyle.hamilton@gmail.com>
+Description: Interactive shiny application for running classical test theory (item analysis).
+License: GPL-3
